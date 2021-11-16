@@ -1,0 +1,41 @@
+body, .btn-container {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    margin: 2rem 20rem;
+    padding: 2rem;
+    border: 1px solid #000;
+}
+.game-view {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8rem;
+}
+.player-btn {
+    background: transparent;
+    border: 0;
+    font-size: 4rem;
+}
+.move, #game-message {
+    font-size: 2rem;
+}
+.player-btn, #player-selection {
+    transform: scale(1, -1) rotate(90deg);
+}
+#player-selection, #computer-selection {
+    font-size: 8rem;
+}
+#computer-selection {
+    transform: scale(-1, -1) rotate(90deg);
+}
+#game-message {
+    text-align: center;
+}

@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <style>
-        body {
-            background-color: #181A1B;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="container">
+        <div class="game-view">
+            <div class="btn-container">
+                <button class="player-btn" title="Rock" data-value="Rock">✊</button>
+                <button class="player-btn" title="Paper" data-value="Paper">✋</button>
+                <button class="player-btn" title="Scissors" data-value="Scissors">✌</button>
+            </div>
+            <div class="move">
+                <p>Player : <span id="player-score">0</span></p>
+                <div id="player-selection"></div>
+            </div>
+            <div class="move">
+                <p>Computer : <span id="computer-score">0</span></p>
+                <div id="computer-selection"></div>
+            </div>
+        </div>
+        <div id="game-message"></div>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
