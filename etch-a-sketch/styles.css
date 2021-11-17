@@ -1,0 +1,13 @@
+#container {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    display: grid;
+    width: 480px;
+    height: 480px;
+}
+.square {
+    border: 1px solid #000;
+}
+.bg-black {
+    background-color: #000;
+}
