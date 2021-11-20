@@ -1,3 +1,20 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    gap: 1rem
+}
+.button-container > button {
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 0.5rem;
+}
+@media (hover: hover) {
+    .button-container > button:hover {
+        color: #fff;
+        background-color: #000;
+    }
+  }
 #container {
     border: 1px solid #000;
     display: grid;
