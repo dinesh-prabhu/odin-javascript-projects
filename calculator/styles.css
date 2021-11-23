@@ -1,0 +1,39 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+}
+#container {
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.1rem;
+    background-color: #333333;
+}
+.num-pad-key {
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: #1F1F1F;
+    color: #fff;
+    font-size: 3rem;
+}
+.special-key {
+    font-size: 1.7rem;
+    background-color: #47494B;
+}
+.num-pad-key:hover {
+    background-color: #595959;
+}
+.equal-key {
+    background-color: #0078D4;
+}
+.equal-key:hover {
+    background-color: #0091ff;
+}
