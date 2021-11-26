@@ -9,26 +9,33 @@
 </head>
 <body>
     <div id="container">
-        <button class="num-pad-key special-key">%</button>
-        <button class="num-pad-key special-key">AC</button>
-        <button class="num-pad-key special-key">&larr;</button>
-        <button class="num-pad-key special-key">&divide;</button>
-        <button class="num-pad-key">1</button>
-        <button class="num-pad-key">2</button>
-        <button class="num-pad-key">3</button>
-        <button class="num-pad-key special-key">&times;</button>
-        <button class="num-pad-key">4</button>
-        <button class="num-pad-key">5</button>
-        <button class="num-pad-key">6</button>
-        <button class="num-pad-key special-key">-</button>
-        <button class="num-pad-key">7</button>
-        <button class="num-pad-key">8</button>
-        <button class="num-pad-key">9</button>
-        <button class="num-pad-key special-key">+</button>
-        <button class="num-pad-key special-key">+/-</button>
-        <button class="num-pad-key">0</button>
-        <button class="num-pad-key special-key">.</button>
-        <button class="num-pad-key equal-key">=</button>
+        <div class="display-view">0</div>
+        <div id="keys-container">
+            <button data-type="converter" class="num-pad-key special-key">%</button>
+            <button data-type="clear" class="num-pad-key special-key">AC</button>
+            <button data-type="delete" class="num-pad-key special-key">⌫</button>
+            <button data-type="operator" class="num-pad-key special-key">&divide;</button>
+            <button data-type="number" class="num-pad-key">1</button>
+            <button data-type="number"class="num-pad-key">2</button>
+            <button data-type="number" class="num-pad-key">3</button>
+            <button data-type="operator" class="num-pad-key special-key">&times;</button>
+            <button data-type="number" class="num-pad-key">4</button>
+            <button data-type="number" class="num-pad-key">5</button>
+            <button data-type="number" class="num-pad-key">6</button>
+            <button data-type="operator" class="num-pad-key special-key">-</button>
+            <button data-type="number" class="num-pad-key">7</button>
+            <button data-type="number" class="num-pad-key">8</button>
+            <button data-type="number" class="num-pad-key">9</button>
+            <button data-type="operator" class="num-pad-key special-key">+</button>
+            <button data-type="converter" class="num-pad-key special-key">+/-</button>
+            <button data-type="number" class="num-pad-key">0</button>
+            <button data-type="converter" id="decimal-key" class="num-pad-key special-key">.</button>
+            <button data-type="converter" class="num-pad-key equal-key">=</button>
+        </div>
     </div>
+    <footer>
+        Made by <a href="https://github.com/dinesh-prabhu" target="_blank">Dinesh</a>.
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
