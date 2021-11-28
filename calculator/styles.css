@@ -60,3 +60,6 @@ footer {
     bottom: 0;
     margin-bottom: 10px;
 }
+.reduce-display-font {
+    font-size: 3rem;
+}

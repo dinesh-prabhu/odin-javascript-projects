@@ -1,12 +1,33 @@
 let input1, input2, currentOperator;
 
+let keyMap = {
+    "operator": ["+", "-", "*", "/"],
+    "converter": ["%", "=", "."]
+}
+
 const displayView = document.querySelector(".display-view");
 const keyContainer = document.querySelector("#keys-container");
 const decimalKey = document.querySelector("#decimal-key");
 
 keyContainer.addEventListener("click", buttonActionHandler);
+document.addEventListener("keyup", keyboardListener);
 
 clearInputValues();
+
+function keyboardListener(e) {
+    let key = e.key;
+    if(0 <= key && key <= 9) {
+        handleNumberInput(key);
+    } else if(keyMap.operator.includes(key)) {
+        handleOperation(key);
+    } else if(key == "Backspace") {
+        deleteFromView();
+    } else if(keyMap.converter.includes(key)) {
+        handleConversion(key);
+    } else if(key == "Enter") {
+        handleConversion("=");
+    }
+}
 
 function getDisplayValue() {
     return currentOperator ? input2 : input1;
@@ -24,6 +45,11 @@ function clearInputValues() {
 }
 function addToDisplayView(content) {
     setDisplayValue(content);
+    let maxCharExceeded =  content.length > 9;
+    displayView.classList.toggle("reduce-display-font", maxCharExceeded);
+    if(maxCharExceeded) {
+        content = Number(content).toPrecision(9);
+    }
     displayView.textContent = content;
 }
 function clearDisplayView() {
@@ -49,7 +75,6 @@ function handleConversion(keyValue) {
     }
 }
 function handleOperation(operator) {
-    debugger;
     if(currentOperator !== null) {
         operate();
     }
@@ -69,6 +94,7 @@ function operate() {
         case "×":
             result = num1 * num2;
             break;
+        case "/":
         case "÷":
             if(num2 == 0) {
                 return alert("Can't divide by 0!");
